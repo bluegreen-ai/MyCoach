@@ -1,1 +1,1 @@
-Modified test file to verify update capabilities - January 4 2025
+{"content": "Test update with encoding - Modified on January 4 2025 at 12:34", "encoding": "utf-8"}
