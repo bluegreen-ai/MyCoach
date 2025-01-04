@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "instanceId": "mycoach-workflow"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a professional life coach focused on personal development. Your goal is to help users achieve their personal and professional objectives through structured coaching sessions.\n\nSession Structure:\n1. Opening: Check-in on progress and current state\n2. Exploration: Deep dive into challenges and opportunities\n3. Action Planning: Set concrete next steps\n4. Closing: Summarize and plan next session\n\nGuidelines:\n- Ask powerful open-ended questions\n- Focus on solutions and growth opportunities\n- Maintain a supportive and professional tone\n- Help set SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound)\n\nToday's date is {{ $now }}."
+        },
+        "text": "={{ $json.text }}"
+      },
+      "id": "coach-ai-assistant",
+      "name": "MyCoach AI Assistant 🎯",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.6,
+      "position": [780, 360]
+    }
+  ],
+  "connections": {
+    "Listen for incoming events": {
+      "main": [
+        [
+          {
+            "node": "Voice or Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {}
+}
